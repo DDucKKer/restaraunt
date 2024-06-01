@@ -19,3 +19,11 @@
 {"level":"error"}
 {"level":"error"}
 {"level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
+{"base":"postgres://base","code":"ERR_INVALID_URL","input":"postgresql://postgres:iQmYWYRWANyFWFWpMbaWcHRAkpbkmmiY@viaduct.proxy.rlwy.net:50623%20-d/railway","level":"error"}
