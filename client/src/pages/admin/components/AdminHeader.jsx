@@ -8,7 +8,7 @@ export default function AdminHeader({name, logout}){
     const [info, setInfo] = useState([]);
 
     const getInfo = async() =>{
-        await fetch('http://localhost:5000/mainifo')
+        await fetch('https://restaraunt-lilac.vercel.app/mainifo')
             .then(response => response.json())
             .then(jsonData => setInfo(jsonData))
             .catch(err => console.log(err));    

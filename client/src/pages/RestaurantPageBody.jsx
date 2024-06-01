@@ -14,7 +14,7 @@ const RestaurantPageBody = ({restId}) => {
     const [restaurant, setRest] = useState([]);
     const [array, setArray] = useState([])
     const getRest = async() =>{
-        await fetch(`http://localhost:5000/cuisines/${restId}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/cuisines/${restId}`)
             .then(response => response.json())
             .then(jsonData => setRest(jsonData))
             .catch(err => console.log(err));
@@ -26,7 +26,7 @@ const RestaurantPageBody = ({restId}) => {
 
     const [dishes, setDish] = useState([])
     const getDish = async() =>{
-        await fetch(`http://localhost:5000/menu`)
+        await fetch(`https://restaraunt-lilac.vercel.app/menu`)
             .then(response => response.json())
             .then(jsonData => setDish(jsonData))
             .catch(err => console.log(err));
@@ -45,7 +45,7 @@ const RestaurantPageBody = ({restId}) => {
 
     const [sections, setSection] = useState([])
     const getSection = async() =>{
-        await fetch(`http://localhost:5000/section_and_cuisines/${restId}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/section_and_cuisines/${restId}`)
             .then(response => response.json())
             .then(jsonData => setSection(jsonData))
             .catch(err => console.log(err));

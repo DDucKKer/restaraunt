@@ -15,7 +15,7 @@ export default function WorkWithRestaurants(){
     const [logoFile, setLogoFile] = useState()
     const [restaurant, setRest] = useState([]);
     const getRest = async() =>{
-        await fetch(`http://localhost:5000/cuisines`)
+        await fetch(`https://restaraunt-lilac.vercel.app/cuisines`)
             .then(response => response.json())
             .then(jsonData => setRest(jsonData))
             .catch(err => console.log(err));
@@ -38,7 +38,7 @@ export default function WorkWithRestaurants(){
         formData.append("fileName", fileName);
         try {
             const res = await axios.post(
-                "http://localhost:5000/upload",
+                "https://restaraunt-lilac.vercel.app/upload",
                 formData
             );
         } catch (err) {
@@ -50,7 +50,7 @@ export default function WorkWithRestaurants(){
         try {
             const { cuisine_name, logo } = newRest;
             const body = { cuisine_name, logo }
-            const response = await fetch('http://localhost:5000/cuisines', {
+            const response = await fetch('https://restaraunt-lilac.vercel.app/cuisines', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(body)
@@ -67,7 +67,7 @@ export default function WorkWithRestaurants(){
     const deleteRest = async(id) =>{
         if (window.confirm('Видалити категорію?'))
         try {
-            const response = await fetch(`http://localhost:5000/cuisines/${id}`, {
+            const response = await fetch(`https://restaraunt-lilac.vercel.app/cuisines/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json'}
             })

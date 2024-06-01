@@ -18,7 +18,7 @@ export default function MainPageBody({info}) {
     const [restaurants, setRestlist] = useState([]);
 
     const getRestlist = async() =>{
-        await fetch('http://localhost:5000/cuisines')
+        await fetch('https://restaraunt-lilac.vercel.app/cuisines')
             .then(response => response.json())
             .then(jsonData => setRestlist(jsonData))
             .catch(err => console.log(err));

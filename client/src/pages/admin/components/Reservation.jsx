@@ -8,7 +8,7 @@ export default function Reservation({choosedRest}){
 
     const [booking, setBooking] = useState([])
     const getBooking = async() =>{
-        await fetch(`http://localhost:5000/booking/cuisine/${choosedRest}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/booking/cuisine/${choosedRest}`)
             .then(response => response.json())
             .then(jsonData => setBooking(jsonData))
             .catch(err => console.error(err.message));
@@ -20,7 +20,7 @@ export default function Reservation({choosedRest}){
     const deleteBooking = async (id) => {
         if (window.confirm('Видалити категорію?'))
         try {
-            await fetch (`http://localhost:5000/booking/${id}`,{
+            await fetch (`https://restaraunt-lilac.vercel.app/booking/${id}`,{
                 method: 'DELETE'
             })
             getBooking();

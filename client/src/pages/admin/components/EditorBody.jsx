@@ -20,12 +20,12 @@ export default function ChooseRestaurant({choosedRest}){
 
     const getRestaurantInfo = async() =>{
         if (choosedRest === 'ORM'){
-            await fetch(`http://localhost:5000/complex`)
+            await fetch(`https://restaraunt-lilac.vercel.app/complex`)
                 .then(response => response.json())
                 .then(jsonData => setRestaurant(jsonData))
                 .catch(err => console.log(err));
         } else {
-            await fetch(`http://localhost:5000/cuisines/${choosedRest}`)
+            await fetch(`https://restaraunt-lilac.vercel.app/cuisines/${choosedRest}`)
                 .then(response => response.json())
                 .then(jsonData => setRestaurant(jsonData))
                 .catch(err => console.log(err));

@@ -13,7 +13,7 @@ export default function ComplexInfoUpd(){
     const [restaurant, setRestaurant] = useState([]);
 
     const getRestaurantInfo = async() =>{
-        await fetch(`http://localhost:5000/complex`)
+        await fetch(`https://restaraunt-lilac.vercel.app/complex`)
             .then(response => response.json())
             .then(jsonData => setRestaurant(jsonData))
             .catch(err => console.log(err));
@@ -38,7 +38,7 @@ export default function ComplexInfoUpd(){
         htmlFormData.append("fileName", fileName);
         try {
             const res = await axios.post(
-                "http://localhost:5000/upload",
+                "https://restaraunt-lilac.vercel.app/upload",
                 htmlFormData
             );
         } catch (err) {
@@ -60,7 +60,7 @@ export default function ComplexInfoUpd(){
 
             const body = { name, logo, frst_text, scnd_text, frst_bg, scnd_bg, adress, contacts, hours, frst_quote, scnd_quote, telegram, instagram, facebook, image };
             
-            const response = await fetch(`http://localhost:5000/complex`, {
+            const response = await fetch(`https://restaraunt-lilac.vercel.app/complex`, {
                 method: 'PUT', 
                 body: JSON.stringify(body), 
                 headers: {

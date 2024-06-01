@@ -56,7 +56,7 @@ function App() {
   const [restaurants, setRestlist] = useState([]);
 
   const getRestlist = async() =>{
-      await fetch('http://localhost:5000/cuisines')
+      await fetch('https://restaraunt-lilac.vercel.app/cuisines')
           .then(response => response.json())
           .then(jsonData => setRestlist(jsonData))
           .catch(err => console.log(err));
@@ -70,7 +70,7 @@ function App() {
   const [info, setInfo] = useState([]);
 
   const getInfo = async() =>{
-      await fetch('http://localhost:5000/mainifo')
+      await fetch('https://restaraunt-lilac.vercel.app/mainifo')
           .then(response => response.json())
           .then(jsonData => setInfo(jsonData))
           .catch(err => console.log(err));
@@ -88,7 +88,7 @@ function App() {
  
   const isAuth = async () => {
     try {
-      const res = await fetch("http://localhost:5000/auth/is-verify", {
+      const res = await fetch("https://restaraunt-lilac.vercel.app/auth/is-verify", {
         method: "GET",
         headers: { token: localStorage.token }
       });

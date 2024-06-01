@@ -18,7 +18,7 @@ export default function Feedback({setShowFeedback}){
         
         try {
             const body = { client_name, client_surname, phone_number, email, message };
-            const response = await fetch("/feedback", {
+            const response = await fetch("https://restaraunt-lilac.vercel.app/feedback", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(body)

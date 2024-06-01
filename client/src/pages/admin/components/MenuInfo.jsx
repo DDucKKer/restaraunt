@@ -16,7 +16,7 @@ export default function MenuInfo({choosedRest}){
         if(section_name){
             try {
                 const body = { section_name, cuisine_id };
-                await fetch("http://localhost:5000/sections", {
+                await fetch("https://restaraunt-lilac.vercel.app/sections", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json'},
                     body: JSON.stringify(body)
@@ -33,7 +33,7 @@ export default function MenuInfo({choosedRest}){
     }
     const [sections, setSections] = useState([])
     const getSections = async() =>{
-        await fetch(`http://localhost:5000/sections/cuisine/${choosedRest}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/sections/cuisine/${choosedRest}`)
             .then(response => response.json())
             .then(jsonData => setSections(jsonData))
             .catch(err => console.log(err));
@@ -44,7 +44,7 @@ export default function MenuInfo({choosedRest}){
     const deleteCategory = async (id) => {
         if (window.confirm('Видалити категорію?'))
         try {
-            await fetch (`http://localhost:5000/sections/${id}`,{
+            await fetch (`https://restaraunt-lilac.vercel.app/sections/${id}`,{
                 method: 'DELETE'
             })
             getSections();
@@ -67,7 +67,7 @@ export default function MenuInfo({choosedRest}){
         try {
             if (section_id === '-10' || !section_id.length || !name.length || !description.length || !weight.length ) return toast.error("Щось обрано не так");
             const body = { section_id, name, description, weight, cuisine_id };
-            await fetch("http://localhost:5000/menu", {
+            await fetch("https://restaraunt-lilac.vercel.app/menu", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(body)
@@ -86,7 +86,7 @@ export default function MenuInfo({choosedRest}){
     
     const [dishes, setDish] = useState([])
     const getDish = async() =>{
-        await fetch(`http://localhost:5000/menu`)
+        await fetch(`https://restaraunt-lilac.vercel.app/menu`)
             .then(response => response.json())
             .then(jsonData => setDish(jsonData))
             .catch(err => console.log(err));
@@ -98,7 +98,7 @@ export default function MenuInfo({choosedRest}){
     const deleteDish = async (id) => {
         if (window.confirm('Видалити страву?'))
         try {
-            await fetch (`http://localhost:5000/menu/${id}`,{
+            await fetch (`https://restaraunt-lilac.vercel.app/menu/${id}`,{
                 method: 'DELETE'
             })
             getDish();
@@ -115,7 +115,7 @@ export default function MenuInfo({choosedRest}){
         setShowSect(false)
     };
     const handleShowSections = async (id) => {
-        await fetch(`http://localhost:5000/sections/${id}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/sections/${id}`)
             .then(response => response.json())
             .then(jsonData => setCategory(jsonData))
             .catch(err => console.log(err));
@@ -130,7 +130,7 @@ export default function MenuInfo({choosedRest}){
         setShowDish(false)
     };
     const handleShowDishes = async (menu_id) => {
-        await fetch(`http://localhost:5000/menu/section/${menu_id}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/menu/section/${menu_id}`)
             .then(response => response.json())
             .then(jsonData => setChoosedDish(jsonData))
             .catch(err => console.error(err.message));

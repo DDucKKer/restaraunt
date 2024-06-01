@@ -12,7 +12,7 @@ const Admin = ({setAuth}) => {
 
     const getName = async () => {
         try {
-            const response = await fetch('http://localhost:5000/dashboard/',{
+            const response = await fetch('https://restaraunt-lilac.vercel.app/dashboard/',{
                 method: 'GET',
                 headers: {
                     token: localStorage.token
@@ -41,7 +41,7 @@ const Admin = ({setAuth}) => {
     }
 
     const getRestaurants = async() =>{
-        await fetch(`http://localhost:5000/cuisines`)
+        await fetch(`https://restaraunt-lilac.vercel.app/cuisines`)
             .then(response => response.json())
             .then(jsonData => setRestaurants(jsonData))
             .catch(err => console.log(err));

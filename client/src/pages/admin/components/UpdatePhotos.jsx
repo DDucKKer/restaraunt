@@ -9,7 +9,7 @@ export default function UpdatePhotos({choosedRest}){
     const [restaurant, setRestaurant] = useState([]);
 
     const getRestaurantInfo = async() =>{
-        await fetch(`http://localhost:5000/cuisines/${choosedRest}`)
+        await fetch(`https://restaraunt-lilac.vercel.app/cuisines/${choosedRest}`)
             .then(response => response.json())
             .then(jsonData => setRestaurant(jsonData))
             .catch(err => console.log(err));
@@ -40,7 +40,7 @@ export default function UpdatePhotos({choosedRest}){
         formData.append("fileName", fileName);
         try {
             const res = await axios.post(
-                "http://localhost:5000/upload",
+                "https://restaraunt-lilac.vercel.app/upload",
                 formData
             );
         } catch (err) {
@@ -58,7 +58,7 @@ export default function UpdatePhotos({choosedRest}){
             uploadFile(file4, image3)
             uploadFile(file5, second_bg)
             const body = { cuisine_name, description, first_bg, hours, image, logo, second_bg, image2, image3 };
-            const response = await fetch(`http://localhost:5000/cuisines/${choosedRest}`, {
+            const response = await fetch(`https://restaraunt-lilac.vercel.app/cuisines/${choosedRest}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify(body)

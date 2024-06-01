@@ -19,7 +19,7 @@ export default function Registration() {
         try {
             const body = { name, password };
             const response = await fetch(
-                "http://localhost:5000/auth/registration",
+                "https://restaraunt-lilac.vercel.app/auth/registration",
                 {
                     method: "POST",
                     headers: {
