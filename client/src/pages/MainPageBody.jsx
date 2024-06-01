@@ -13,7 +13,6 @@ import ReactHtmlParser from 'react-html-parser';
 export default function MainPageBody({info}) {
 
     let reactSwipeEl;
-    console.log(info)
 
     const [restaurants, setRestlist] = useState([]);
 
@@ -74,7 +73,7 @@ export default function MainPageBody({info}) {
         <main>
             <div 
                 className="first-block-bg"
-                style={{background: `url(/src/pages/pics/${info.frst_bg}) 50% 50% fixed`}}
+                style={{background: `url(/pics/${info.frst_bg}) 50% 50% fixed`}}
             >
                 <div 
                     className="first-block"
@@ -95,7 +94,7 @@ export default function MainPageBody({info}) {
                                     item 
                                     xs={6} md={12/restaurant.length}
                                     className="restaurant-block" 
-                                    style={{backgroundImage: `url(/src/pages/pics/${rest.first_bg}) `}}
+                                    style={{backgroundImage: `url(/pics/${rest.first_bg}) `}}
                                 >
                                     <div className="cover">
                                         <div className="restaurant-block-content">
@@ -112,7 +111,7 @@ export default function MainPageBody({info}) {
 
             <div 
                 className="first-block-bg"
-                style={{background: `url(/src/pages/pics/${info.scnd_bg}) 50% 50% fixed`}}
+                style={{background: `url(/pics/${info.scnd_bg}) 50% 50% fixed`}}
             >
                 <div 
                     className="quote"
@@ -131,7 +130,7 @@ export default function MainPageBody({info}) {
                         <div 
                             className="info-bg"
                             style={
-                                {background: `url(/src/pages/pics/${info.image}) 50% 50% no-repeat`,
+                                {background: `url(/pics/${info.image}) 50% 50% no-repeat`,
                                 backgroundSize: 'cover'
                             }}
                         >
@@ -177,7 +176,7 @@ export default function MainPageBody({info}) {
             </div>
             <div 
                 className="first-block-bg"
-                style={{background: `url(/src/pages/pics/${info.scnd_bg}) 50% 50% fixed`}}
+                style={{background: `url(/pics/${info.scnd_bg}) 50% 50% fixed`}}
             >
                 <div 
                     className="quote"

@@ -4,8 +4,7 @@ import telegram from './pics/Telegram2.png'
 import instagram from './pics/Insagram2.png'
 import facebook from './pics/facebook2.png'
 
-const Footer = ({restaurant}) => {
-      console.log(restaurant)
+const Footer = ({restaurant}) => { 
     const contacts = [
         {
           name: 'facebook',
