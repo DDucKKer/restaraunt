@@ -494,38 +494,37 @@ app.post('/feedback', async (req, res) => {
 
 
 //BACKUP
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+// const util = require('util');
+// const exec = util.promisify(require('child_process').exec);
 
-async function ls() {
-    try {
-        // const { dump } = await exec(`pg_dump postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}  > restaurant.dump`);
-        // const { dump } = await exec('pg_dump postgresql://duck:528037@127.0.0.1:5432/diplom_restaurant > restaurant.dump ');
-    } catch (err) {
-        console.error(err.message)        
-    }
-}
-ls()
-setInterval(ls, 21600000); //every 3 hours
+// async function ls() {
+//     try {
+//         const { dump } = await exec(`pg_dump postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}  > restaurant.dump`);
+//     } catch (err) {
+//         console.error(err.message)        
+//     }
+// }
+// ls()
+// setInterval(ls, 21600000); //every 3 hours
 
 
 //Logs
-var winston = require('winston');
+// var winston = require('winston');
 
-var tsFormat = () => (new Date()).toLocaleTimeString();
-var log = winston.createLogger({
-       transports: [
-           new (winston.transports.Console)({
-               timestamp: tsFormat,
-               colorize: true,
-               level: 'info'
-           }),
-           new (winston.transports.File)({
-               filename: './logs/log.log',
-               level: 'error'
-           })
-       ]
-});
+// var tsFormat = () => (new Date()).toLocaleTimeString();
+// var log = winston.createLogger({
+//        transports: [
+//            new (winston.transports.Console)({
+//                timestamp: tsFormat,
+//                colorize: true,
+//                level: 'info'
+//            }),
+//            new (winston.transports.File)({
+//                filename: './logs/log.log',
+//                level: 'error'
+//            })
+//        ]
+// });
 
 // app.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "client/build/index.html"));
