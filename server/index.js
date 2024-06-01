@@ -94,7 +94,7 @@ app.post('/sections', async (req, res) => {
         res.json(newSection);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -105,7 +105,7 @@ app.get("/sections", async (req, res) => {
         res.json(allSections.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -118,7 +118,7 @@ app.get("/sections/:section_id", async (req, res) => {
         res.json(section.rows[0]);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //get setions from 1 cuisine
@@ -130,7 +130,7 @@ app.get("/sections/cuisine/:cuisine_id", async (req, res) => {
         res.json(sections.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //update a section
@@ -145,7 +145,7 @@ app.put("/sections/:section_id", async (req, res) => {
         res.json("Section is Updated!");
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -160,7 +160,7 @@ app.delete("/sections/:section_id", async (req, res) => {
         res.json("Section was Deleted!");
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 });
 //get setions from one restaurant
@@ -171,7 +171,7 @@ app.get("/section_and_cuisines", async (req, res) => {
         res.json(section.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 app.get("/section_and_cuisines/:cuisine_id", async (req, res) => {
@@ -182,7 +182,7 @@ app.get("/section_and_cuisines/:cuisine_id", async (req, res) => {
         res.json(section.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //RESTAURANTSSSSSSSSSSSSSSSSSS
@@ -193,7 +193,7 @@ app.get("/cuisines", async (req, res) => {
         res.json(allSections.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 app.get("/cuisines/:cuisine_id", async (req, res) => {
@@ -203,7 +203,7 @@ app.get("/cuisines/:cuisine_id", async (req, res) => {
         res.json(allSections.rows[0]);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 app.delete("/cuisines/:cuisine_id", async (req, res) => {
@@ -213,7 +213,7 @@ app.delete("/cuisines/:cuisine_id", async (req, res) => {
         res.json('deleted');
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 app.put("/cuisines/:cuisine_id", async (req, res) => {
@@ -227,7 +227,7 @@ app.put("/cuisines/:cuisine_id", async (req, res) => {
         res.json(updCuisines.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -239,7 +239,7 @@ app.post("/cuisines", async (req, res) => {
         res.json(allSections.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //COMPLEX INFORMATION
@@ -250,7 +250,7 @@ app.get("/complex", async (req, res) => {
         res.json(allSections.rows[0]);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 app.put("/complex", async (req, res) => {
@@ -263,7 +263,7 @@ app.put("/complex", async (req, res) => {
         res.json(updComplex.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //MAIN INFORMATION
@@ -274,7 +274,7 @@ app.get("/mainifo", async (req, res) => {
         res.json(allMenu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -295,7 +295,7 @@ app.post('/menu', async (req, res) => {
         res.json(newDish);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -306,7 +306,7 @@ app.get("/menu", async (req, res) => {
         res.json(allMenu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -319,7 +319,7 @@ app.get("/menu/:section_name", async (req, res) => {
         res.json(menu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //DISH FROMONE category 
@@ -331,7 +331,7 @@ app.get("/menu/cuisine/:cuisine_id", async (req, res) => {
         res.json(menu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //DISH FROMONE section 
@@ -343,7 +343,7 @@ app.get("/menu/section/:menu_id", async (req, res) => {
         res.json(menu.rows[0]);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -359,7 +359,7 @@ app.put("/menu/:menu_id", async (req, res) => {
         res.json("Menu is Updated!");
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -374,7 +374,7 @@ app.delete("/menu/:menu_id", async (req, res) => {
         res.json("Dish was Deleted!");
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 });
 //BOOOOOOOKIIIIIING
@@ -385,7 +385,7 @@ app.get("/booking", async (req, res) => {
         res.json(allMenu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 //delete a dish
@@ -399,7 +399,7 @@ app.delete("/booking/:booking_id", async (req, res) => {
         res.json("Dish was Deleted!");
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 });
 app.get("/booking/cuisine/:cuisine_id", async (req, res) => {
@@ -412,7 +412,7 @@ app.get("/booking/cuisine/:cuisine_id", async (req, res) => {
         res.json(allMenu.rows);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -460,7 +460,7 @@ app.post('/booking', async (req, res) => {
         res.json(newBooking);
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
@@ -485,7 +485,7 @@ app.post('/feedback', async (req, res) => {
         });
     } catch (err) {
         console.log(err)
-        log.error(err);
+        //log.error(err);
     }
 })
 
