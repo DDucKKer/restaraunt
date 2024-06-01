@@ -8,7 +8,7 @@ const SecondHeader = ({rest}) => {
       <header id = 'header'>
         {rest.logo 
           ? 
-            <img src={`/src/pages/pics/${rest.logo}`} alt='logo' className="restlogo2"/> 
+            <img src={`/pics/${rest.logo}`} alt='logo' className="restlogo2"/> 
           : 
             <i><p className="restlogo2">{rest.cuisine_name}</p></i>
         }
@@ -17,7 +17,7 @@ const SecondHeader = ({rest}) => {
         <div className="header-body">
           {rest.logo 
             ? 
-              <img src={`/src/pages/pics/${rest.logo}`} alt='logo' className="restlogo"/> 
+              <img src={`/pics/${rest.logo}`} alt='logo' className="restlogo"/> 
             : 
               <i><p className="logo">{rest.cuisine_name}</p></i>
           }

@@ -118,7 +118,7 @@ export default function RestaurantInfoUpd({choosedRest}){
                                 {restaurant.logo}
                             </td>
                             <td>    &emsp;&emsp;   </td>
-                            <td>    <img src={`/src/pages/pics/${restaurant.logo}`} alt='logo' className="restlogo-admin"/>   </td>
+                            <td>    <img src={`/pics/${restaurant.logo}`} alt='logo' className="restlogo-admin"/>   </td>
                         </table>
                     </div>
 

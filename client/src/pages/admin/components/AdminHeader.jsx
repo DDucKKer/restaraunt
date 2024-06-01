@@ -21,7 +21,7 @@ export default function AdminHeader({name, logout}){
     return(
         <Fragment>
             {info.length ?
-                <a href="/"><img src={`/src/pages/pics/${info[0].logo}`} alt='logo' className="adminlogo"/></a>
+                <a href="/"><img src={`/pics/${info[0].logo}`} alt='logo' className="adminlogo"/></a>
             :
                 ''
             }
