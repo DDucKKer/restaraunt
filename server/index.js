@@ -32,35 +32,35 @@ const transporter = nodemailer.createTransport({
 app.use(cors());
 app.use(express.json()); //=> allows us to access the req.body
 
-app.use(fileupload());
-app.use(express.static("files"));
+// app.use(fileupload());
+// app.use(express.static("files"));
 
-app.post("/upload", (req, res) => {
-    const frstpath = __dirname + "/client/public/pics/";
-    const scndpath = __dirname + "/client/build/pics/";
-    const file = req.files.file;
-    const filename = file.name;
+// app.post("/upload", (req, res) => {
+//     const frstpath = __dirname + "../client/public/pics/";
+//     const scndpath = __dirname + "../client/build/pics/";
+//     const file = req.files.file;
+//     const filename = file.name;
 
-    file.mv(`${frstpath}${filename}`, (err) => {
-        if (err) {
-        //   res.status(500).send({ message: "File upload failed", code: 200 });
-        log.error(err.message);
-        console.error(err.message)
-        }
-        // res.status(200).send({ message: "File Uploaded", code: 200 });
-    });
-    file.mv(`${scndpath}${filename}`, (err) => {
-        if (err) {
-        //   res.status(500).send({ message: "File upload failed", code: 200 });
-        log.error(err.message);
-        console.error(err.message)
-        }
-        // res.status(200).send({ message: "File Uploaded", code: 200 });
-    });
-});
+//     file.mv(`${frstpath}${filename}`, (err) => {
+//         if (err) {
+//         //   res.status(500).send({ message: "File upload failed", code: 200 });
+//         log.error(err.message);
+//         console.error(err.message)
+//         }
+//         // res.status(200).send({ message: "File Uploaded", code: 200 });
+//     });
+//     file.mv(`${scndpath}${filename}`, (err) => {
+//         if (err) {
+//         //   res.status(500).send({ message: "File upload failed", code: 200 });
+//         log.error(err.message);
+//         console.error(err.message)
+//         }
+//         // res.status(200).send({ message: "File Uploaded", code: 200 });
+//     });
+// });
 
-// app.use(express.static(path.join(__dirname, "client/build")))
-app.use(express.static("./client/build"));
+// // app.use(express.static(path.join(__dirname, "client/build")))
+// app.use(express.static("../client/build"));
 
 
 if(process.env.NODE_ENV === "production"){
