@@ -103,7 +103,7 @@ const RestaurantPageBody = ({restId}) => {
                 <main>
                     <div 
                         className="first-block-bg"
-                        style={{backgroundImage: `url(/src/pages/pics/${restaurant.first_bg})`}}
+                        style={{backgroundImage: `url(/pics/${restaurant.first_bg})`}}
                     >
                         <div 
                             className="first-rest-block"
@@ -146,7 +146,7 @@ const RestaurantPageBody = ({restId}) => {
                                     <div 
                                         className="info-rest-bg"
                                         style={{
-                                            background: `url(/src/pages/pics/${(restaurant.image) ? restaurant.image : restaurant.first_bg}) 50% 50% / cover no-repeat`,
+                                            background: `url(/pics/${(restaurant.image) ? restaurant.image : restaurant.first_bg}) 50% 50% / cover no-repeat`,
                                             backgroundSize: 'cover'
                                         }}
                                     >
@@ -170,7 +170,7 @@ const RestaurantPageBody = ({restId}) => {
                                     <div 
                                         className="info-rest-bg"
                                         style={{
-                                            background: `url(/src/pages/pics/${(restaurant.image2) ? restaurant.image2 : restaurant.first_bg}) 50% 50% / cover no-repeat`,
+                                            background: `url(/pics/${(restaurant.image2) ? restaurant.image2 : restaurant.first_bg}) 50% 50% / cover no-repeat`,
                                             backgroundSize: 'cover'
                                         }}
                                     >
@@ -183,7 +183,7 @@ const RestaurantPageBody = ({restId}) => {
                                     <div 
                                         className="info-rest-bg"
                                         style={{
-                                            background: `url(/src/pages/pics/${(restaurant.image3) ? restaurant.image3 : restaurant.first_bg}) 50% 50% / cover no-repeat`,
+                                            background: `url(/pics/${(restaurant.image3) ? restaurant.image3 : restaurant.first_bg}) 50% 50% / cover no-repeat`,
                                             backgroundSize: 'cover'
                                         }}
                                     >
@@ -201,7 +201,7 @@ const RestaurantPageBody = ({restId}) => {
                     <div 
                         className="first-block-bg"
                         style={{
-                            backgroundImage: `url(/src/pages/pics/${(restaurant.second_bg) ? restaurant.second_bg : restaurant.first_bg})`
+                            backgroundImage: `url(/pics/${(restaurant.second_bg) ? restaurant.second_bg : restaurant.first_bg})`
                         }}
                     >
                         <div 
@@ -225,7 +225,7 @@ const RestaurantPageBody = ({restId}) => {
                                 <div 
                                     className="info-reserv-bg"
                                     style={
-                                        {background: `url(/src/pages/pics/${restaurant.image2 ? restaurant.image2 : restaurant.first_bg}) 50% 50% no-repeat`,
+                                        {background: `url(/pics/${restaurant.image2 ? restaurant.image2 : restaurant.first_bg}) 50% 50% no-repeat`,
                                         backgroundSize: 'cover'
                                     }}
                                 >

@@ -124,7 +124,7 @@ export default function ComplexInfoUpd(){
                             {restaurant.logo}
                         </td>
                         <td>    &emsp;&emsp;   </td>
-                        <td>    <img src={`/src/pages/pics/${restaurant.logo}`} alt='logo' className="restlogo-admin"/>   </td>
+                        <td>    <img src={`/pics/${restaurant.logo}`} alt='logo' className="restlogo-admin"/>   </td>
                     </table>
                 </div>
                 <div className = "form-group">

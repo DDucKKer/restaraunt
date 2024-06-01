@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import MainPage from './pages/MainPage';
-import RestaurantPage from './pages/RestaurantPage';
-import Feedback from './pages/Feedback'
-import Footer from './pages/Footer'
+import RestaurantPage from './pages/RestaurantPage'; 
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,8 +9,6 @@ import {
   Navigate
 } from "react-router-dom";
 
-
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Admin from './pages/admin/Admin';
 import Login from './pages/admin/Login';
