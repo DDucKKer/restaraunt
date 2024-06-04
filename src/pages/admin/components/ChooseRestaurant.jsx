@@ -12,7 +12,7 @@ export default function ChooseRestaurant({restaurants, setRest}){
             <Grid container justify="center">
                 <div
                     className="admin-restaurants"
-                    style={{backgroundImage: `url(/src/pages/pics/fblock.jpg) `}}
+                    style={{backgroundImage: `url(/pics/fblock.jpg) `}}
                 >
                     <a href="#" onClick={()=> setRest('ORM')}>Odessa restaurants market</a>
                 </div>
@@ -21,7 +21,7 @@ export default function ChooseRestaurant({restaurants, setRest}){
                 restaurants.map((item, index) => (
                     <div key = {index} 
                         className="admin-restaurants"
-                        style={{backgroundImage: `url(/src/pages/pics/${item.first_bg}) `}}
+                        style={{backgroundImage: `url(/pics/${item.first_bg}) `}}
                     >
                         <a href="#" onClick={()=> setRest(item.cuisine_id)}>{item.cuisine_name}</a>
                     </div>
