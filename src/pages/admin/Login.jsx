@@ -49,7 +49,7 @@ export default function Login({setAuth, info}) {
             <header>
                 
             {info.length ?
-                <img src={`/src/pages/pics/${info[0].logo}`} alt='logo' className="adminlogo"/>
+                <img src={`/pics/${info[0].logo}`} alt='logo' className="adminlogo"/>
             :
                 ''
             }
